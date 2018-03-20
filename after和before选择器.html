@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>before和after选择器</title>
+	<style>
+		.mydiv p:before{
+			content: '上课了'
+		}
+
+
+		.mydiv p:after{
+			content: url(./img/img2.jpg);
+		}
+
+
+		.arrow_box {
+            position: relative;
+            border: 1px solid #c2e1f5;
+            width: 200px;
+            height: 100px;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            margin: 50px;
+            /*float: left;*/
+        }
+
+        .arrow_box:before,
+        .arrow_box:after {
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border: solid;
+            content: "";
+            border-color: rgba(136, 183, 213, 0);
+        }
+        .arrow_box.down:before {
+            border-bottom-color: #c2e1f5;
+            border-width: 12px;
+            left: 49%;
+            margin-left: -10px;
+            bottom: 100%;
+        }
+
+        .arrow_box.down:after {
+            border-bottom-color: #fff;
+            border-width: 10px;
+            left: 50%;
+            margin-left: -10px;
+            bottom: 100%;
+        }
+
+
+        .box {
+		    display: inline-block;
+		    *display: inline;
+		    width: 200px;
+		    height: 248px;
+		    margin: 20px;
+		    background-color: #fff;
+		    border: 1px solid #eee;
+		    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+		    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+		    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+		    position: relative;
+		    *zoom: 1;
+		}
+
+		/*.box:before {
+		    -webkit-transform: skew(-15deg) rotate(-6deg);
+		    -moz-transform: skew(-15deg) rotate(-6deg);
+		    transform: skew(-15deg) rotate(-6deg);
+		    left: 15px;
+		}*/
+		/*.box:after {
+		    -webkit-transform: skew(15deg) rotate(6deg);
+		    -moz-transform: skew(15deg) rotate(6deg);
+		    transform: skew(15deg) rotate(6deg);
+		    right: 15px;
+		}*/
+
+		/*.box:before, *//*.box:after {
+		    width: 70%;
+		    height: 55%;
+		    content: ' ';    
+		    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+		    -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+		    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  
+		    position: absolute;
+		    bottom: 10px;
+		    z-index: -1;        
+		}*/
+
+		
+	</style>		
+
+</head>
+<body>
+	<div class="box"></div>
+	<div class="mydiv">
+		<p>
+			你好，同学
+		</p>
+	</div>
+
+	<p>盒子外面</p>
+
+
+	<div class="arrow_box down"></div>
+
+
+
+
+
+</body>
+</html>

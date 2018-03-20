@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>认识flex</title>
+	<style>
+		.mydiv{
+			display: flex;
+		}
+
+		.mydiv div{
+
+			width: 300px;
+			height: 300px;
+			background-color: #f01;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<ol>
+		<li>flex，弹性布局；</li>
+		<li>flex布局可以让你不再使用float；</li>
+		<li>flexbox提供了一个有效的布局方式，即使在不知道窗口大小或未知元素的情况下，仍可以智能的分配窗口空间；能够更好的响应式布局；</li>
+		<li>设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效；</li>
+		<li>开始flex：只需要设置一个flex容器即可，也就是定义 display:flex 或 display:inline-flex；也许一切看上去就是那么简单；</li>
+		<li>显式声明了Flex容器之后，一个Flexbox格式化上下文（Flexbox formatting context）就立即启动了；</li>
+
+		<li>
+			两个小术语：
+			<pre>
+				Flex容器（Flex Container）：父元素显式设置了display:flex，所有子元素自动成为容器成员；
+				Flex项目（Flex Items）：Flex容器内的子元素；
+			</pre>
+		</li>
+	</ol>
+
+	
+
+
+	<div class="mydiv">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+</body>
+</html>

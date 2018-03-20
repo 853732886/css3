@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex弹性布局容器属性</title>
+	<style>
+		.mydiv{
+			border: 1px solid red;
+			display: flex;
+			/*flex-direction: row;*/
+			/*flex-direction: column-reverse;*/
+			/*flex-wrap: wrap;*/
+			flex-flow:row wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			align-content: flex-end;
+			height: 800px;
+		}
+
+		.mydiv div{
+			width: 500px;
+			height: 200px;
+			background-color: #f01;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h3>flex容器属性</h3>
+	<ol>
+		<li>
+			flex-direction：控制flex项目沿着主轴（main axis）的排列方向；有四个可选值：
+			<pre>
+				row：主轴，默认值；
+				column：侧轴(cross axis)
+				row-reverse：反方向
+				column-reverse：反方向
+			</pre>
+		</li>
+		<li>
+			flex-wrap：有三个可选值
+			<pre>
+				wrap：达到flex容器默认跨度后换行；
+				nowrap：容器内flex项目不换行，默认值；
+				wrap-reverse：反方向；
+			</pre>
+		</li>
+		<li>
+			flex-flow：是flex-direction和flex-wrap两个属性的合体；参考border理解；
+			<pre>
+				flex-flow:row wrap;
+			</pre>
+		</li>
+		<li>
+			justify-content定义了flex项目在主轴上的对齐方式，还记得我们做两端对齐时查过的资料吗？可选值：
+			<pre>
+				flex-start：沿着主轴左对齐，默认值;
+				flex-end：沿着主轴右对齐；
+				center：居中对齐;
+				space-between：两端对齐，参考文字两端对齐理解;
+				apce-around：让每个flex项目有相同的空间;
+			</pre>
+
+		</li>
+		<li>
+			align-items，类似justify-content，控制在侧轴上的对齐方式，可接受的值：
+			<pre>
+				flex-start:让所有的flex项目顶端对齐;
+				flex-end:让所有的flex项目底部对齐;
+				center:居中对齐;
+				stretch:默认值，让所有的flex项目高度和容器项目高度相同;
+				baseline:沿着基线对齐;
+			</pre>
+		</li>
+		<li>
+			align-content：用于多行的flex容器，排列效果和align-items一样，没有baseline选项；
+			<pre>
+				stretch：默认值，沿着侧轴适应可用空间；
+				flex-start:让多行flex项目沿着侧轴从上到下排列，也就是顶端对齐；
+				flex-end:让多行flex项目从下向上排列，底端对齐；
+				center：垂直方向居中；
+			</pre>
+		</li>
+	</ol>
+
+	<div class="mydiv">
+		<div>1</div>
+		<div>
+			2
+			<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6
+		</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+</body>
+</html>
